@@ -1,0 +1,17 @@
+{
+  "name": "Savour",
+  "displayName": "Savour",
+  "expo": {
+    "name": "Savour",
+    "slug": "Savour",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
