@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     modal: {
       fontFamily: 'Garamond',
       backgroundColor:"#D33F2D",
-      fontSize: 70,
+      fontSize: 20,
       borderRadius: 50,
       padding: "20px"
     }
