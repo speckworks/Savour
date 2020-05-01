@@ -1,5 +1,5 @@
 <h1>Savour</h1>
-<h2>##Mock of a popular craft beer ordering application.</h2> 
+<h2>Mock of a popular craft beer ordering application.</h2> 
 <h3>*This is a super basic React Native App.*<h3>  
 
 **Yarn Add** any missing dependencies in the cli. 
@@ -27,4 +27,4 @@
 I recommend starting with the web view, but if you are able to add the Expo App in your mobile device(iOS or Android), it will allow you to Scan the QR code from the console window of your local host browser and open the app on your phone. 
 
 *Pop a cold one if you got one, but don't risk your life for it.* 
-#Cheers!  
+<h1>Cheers!</h1>  
