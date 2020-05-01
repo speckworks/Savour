@@ -2,7 +2,11 @@
 ##Mock of a popular craft beer ordering application. 
 ###This is super basic React Native App.  
 
-**Yarn Add** any missing dependencies in the cli. eg.
+**Yarn Add** any missing dependencies in the cli. 
+<br>
+<text>For Example:
+</text>
+
 <ul>
 <br>
 <li>
