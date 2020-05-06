@@ -1,6 +1,9 @@
 import React from 'react';
+import { useState } from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import { MyCarousel } from '../components/carousel';
+
 
 export default function Header({ title, navigation }) {
 
@@ -9,11 +12,12 @@ export default function Header({ title, navigation }) {
   }
 
   return (
-    <ImageBackground source={require('../assets/game_bg.png')} style={styles.header}>
+    <ImageBackground source={require('../assets/tavourLogo.png')} style={styles.header}>
+      <br></br>
       <MaterialIcons name='menu' size={28} onPress={openMenu} style={styles.icon} />
       <View style={styles.headerTitle}>
         <Image source={require('../assets/tavourLogo.png')} style={styles.headerImage} />
-        <Text style={styles.headerText}>{title}</Text>
+        <Text style={styles.headerText}>Savour Beer</Text>
       </View>
     </ImageBackground>
   );

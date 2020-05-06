@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { StyleSheet, View, Text, TouchableOpacity, FlatList, Modal } from 'react-native';
 import { globalStyles } from '../styles/global';
 import { MaterialIcons } from '@expo/vector-icons';
+import { MyCarousel } from '../components/carousel';
+
 import Card from '../shared/card';
 
 export default function Home({ navigation }) {
@@ -14,34 +16,7 @@ export default function Home({ navigation }) {
 
   return (
     <View style={globalStyles.container}>
-  
-      <Modal visible={modalOpen} animationType='slide'>
-        <View style={styles.modalContent}>
-          <MaterialIcons 
-            name='close'
-            size={24} 
-            style={{...styles.modalToggle, ...styles.modalClose}} 
-            onPress={() => setModalOpen(false)} 
-          />
-          <Text>Hello from the modal :)</Text>
-        </View>
-      </Modal>
-
-      <MaterialIcons 
-        name='add' 
-        size={24} 
-        style={styles.modalToggle}
-        onPress={() => setModalOpen(true)} 
-      />
-
-      <FlatList data={reviews} renderItem={({ item }) => (
-        <TouchableOpacity onPress={() => navigation.navigate('ReviewDetails', item)}>
-          <Card>
-            <Text style={globalStyles.titleText}>{ item.title }</Text>
-          </Card>
-        </TouchableOpacity>
-      )} />
-
+      <MyCarousel></MyCarousel>
     </View>
   );
 }
