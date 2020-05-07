@@ -9,20 +9,13 @@
 
 <ul>
 <br>
-<li>
-"yarn add @expo/vector-icons" 
-<br>
-<li>
-"yarn add react-native-snap-carousel"
-<br>
-<li>
-"yarn add react-native"
+"yarn add react-native"  if you haven't already installed it on your system. 
 <br>
 <li>
 "yarn install" for good measure. 
 <br>
 <br>
-**Expo Start** from Command Line.  
+**Expo Start** from Command Line runs the App.  If you have Expo App downloaded on your phone, you can grab a QR code in the console and start up the app on your phone.  Otherwise, run the app in the web browser.  
 </ul>
 <br>
 I recommend starting with the web view, but if you are able to add the Expo App in your mobile device(iOS or Android), it will allow you to Scan the QR code from the console window of your local host browser and open the app on your phone. 
