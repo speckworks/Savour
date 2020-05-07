@@ -4,11 +4,11 @@
  <h5>
  <div>
 <br>
-<text>For Example:
-</text>
 <ul>
 <br>
+<li>
 "yarn add react-native"  if you haven't already installed it on your system. 
+</li>
 <br>
 <li>
 "yarn install" for good measure. 
