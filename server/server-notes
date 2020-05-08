@@ -1,0 +1,28 @@
+Written endpoint `https://eu1.prisma.sh/william-robert-simpson-b9a32f/savour-serv/dev` to prisma.yml
+
+Creating stage dev for service savour-serv ✔
+Deploying service `savour-serv` to stage `dev` to server `prisma-eu1` 797ms
+
+Changes:
+
+  Beer (Type)
+  + Created type `Beer`
+  + Created field `id` of type `ID!`
+  + Created field `name` of type `String!`
+  + Created field `abv` of type `Int!`
+  + Created field `body` of type `String!`
+  + Created field `createdAt` of type `DateTime!`
+  + Created field `description` of type `String!`
+
+Applying changes 1.7s
+Generating schema 52ms
+Saving Prisma Client (JavaScript) at /Users/ws/Development/Savour/server/src/generated/prisma-client
+
+Your Prisma endpoint is live:
+
+  HTTP:  https://eu1.prisma.sh/william-robert-simpson-b9a32f/savour-serv/dev
+  WS:    wss://eu1.prisma.sh/william-robert-simpson-b9a32f/savour-serv/dev
+
+You can view & edit your data here:
+
+  Prisma Admin: https://eu1.prisma.sh/william-robert-simpson-b9a32f/savour-serv/dev/_admin

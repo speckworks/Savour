@@ -1,0 +1,59 @@
+scalar DateTime
+
+type Query {
+  info: String!
+  product(filter: String!, skip: Int, first: Int, orderBy: BeerOrderByInput): Product!
+}
+
+type Product {
+  beers: [Beer!]!
+  count: Int!
+}
+
+type Mutation {
+	post(name: String!, description: String!, abv: Int!, body: String!): Beer!
+	signup(email: String!, password: String!, name: String!): AuthPayload
+	login(email: String!, password: String!): AuthPayload
+	vote(linkId: ID!): Vote
+}
+
+type Beer {
+  id: ID! 
+  name: String!
+  abv: Int!
+  body: String!
+  votes: [Vote!]!
+	postedBy: User
+  createdAt: DateTime!
+  description: String!
+}
+
+type AuthPayload {
+	token: String
+	user: User
+}
+
+type User {
+	id: ID!
+	name: String!
+	email: String!
+	beers: [Beer!]!
+}
+type Subscription {
+	newBeer: Beer
+	newVote: Vote
+}
+type Vote {
+	id: ID!
+	beer: Beer!
+	user: User!
+}
+
+enum BeerOrderByInput {
+  description_ASC
+  description_DESC
+  url_ASC
+  url_DESC
+  createdAt_ASC
+  createdAt_DESC
+}
