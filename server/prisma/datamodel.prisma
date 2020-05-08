@@ -1,0 +1,26 @@
+type Beer {
+  id: ID! @id
+  name: String!
+  abv: Int!
+  body: String!
+  description: String!
+  postedBy: User
+	votes: [Vote!]!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt  
+}
+
+type User {
+	id: ID! @id
+	name: String!
+	email: String! @unique
+	password: String!
+	beers: [Beer!]!
+	votes: [Vote!]!
+}
+
+type Vote {
+	id: ID! @id
+	beer: Beer!
+	user: User!
+}
