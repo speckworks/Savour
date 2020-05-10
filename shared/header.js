@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { MyCarousel } from '../components/carousel';
+import cogwheel from '../assets/gear.svg'
 
 
 export default function Header({ title, navigation }) {
@@ -12,14 +13,15 @@ export default function Header({ title, navigation }) {
   }
 
   return (
-    <ImageBackground source={require('../assets/tavourLogo.png')} style={styles.header}>
+    <View>
+    <ImageBackground style={styles.header}>
       <br></br>
-      <MaterialIcons name='menu' size={28} onPress={openMenu} style={styles.icon} />
+      <MaterialIcons size={28} onPress={openMenu} style={styles.icon} />
       <View style={styles.headerTitle}>
-        <Image source={require('../assets/tavourLogo.png')} style={styles.headerImage} />
         <Text style={styles.headerText}>Savour Beer</Text>
       </View>
     </ImageBackground>
+    </View>
   );
 }
 
@@ -29,7 +31,7 @@ const styles = StyleSheet.create({
     height: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   headerText: {
     fontWeight: 'bold',

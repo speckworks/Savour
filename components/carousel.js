@@ -3,19 +3,23 @@ import { useState } from 'react';
 import {
   Text, 
   View,
-  SafeAreaView } from 'react-native';
+  Image,
+  Button,
+  SafeAreaView, 
+  Dimensions} from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 import amber from '../assets/amberlager.jpg';
 import lager from "../assets/cerveza-lager.png";
 
 export function MyCarousel(props){
-    
+    const Device_Width = Dimensions.get("window").width
     const [carouselItems, setCarouselItems] = useState([
       { beer: "IPA",
+      img: amber
         // image: `${amber}`
       },
        { beer: "Lager",
-        // image: `${lager}`
+        img: lager
       }
     ]);
         console.log("usestate", carouselItems);
@@ -27,25 +31,31 @@ export function MyCarousel(props){
           <View style={{
               backgroundColor:'floralwhite',
               borderRadius: 5,
-              height: "100%",
-              padding: 50,
+              height: 500,
+              width: 400,
+              padding: 10,
               marginLeft: 0,
-              marginRight: 0, }}>
-            <Text style={{fontSize: 30}}>{item.beer}</Text>
-            {/* <Image source={require(item.image)}/> */}
+              marginRight: 0, 
+              paddingTop: 0}}>
+            <Text style={{fontSize: 30, height:400}}>{item.beer}</Text>
             <Text>{item.id}</Text>
+            <Image style={{source:item.img}}></Image>
+            <Button style={{height:'50px', backgroundColor:'black', color:'black'}}>Get This Beer</Button>
+
           </View>
         )
     }
 
     return (
-        <SafeAreaView style={{flex: 1, backgroundColor:'black', paddingTop: 50, }}>
+        <SafeAreaView style={{flex: 1, backgroundColor:'black', paddingTop: 0, }}>
       <View style={{ flex: 1, flexDirection:'row', justifyContent: 'center', }}>
           <Carousel
-            layout={"default"}
+            layout={"stack"}
             data={carouselItems}
-            sliderWidth={300}
-            itemWidth={300}
+            windowSize={1}
+            sliderHeight={800}
+            sliderWidth={400}
+            itemWidth={Device_Width}
             renderItem={_renderItem}
             onSnapToItem = { index => setActiveIndex({activeIndex:index}) } />
       </View>
