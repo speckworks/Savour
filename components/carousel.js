@@ -39,9 +39,17 @@ export function MyCarousel(props){
               paddingTop: 0}}>
             <Text style={{fontSize: 30, height:400}}>{item.beer}</Text>
             <Text>{item.id}</Text>
-            <Image style={{source:item.img}}></Image>
+            <Image source={{uri:item.img}}
+            style={{
+              backgroundColor:'floralwhite',
+              borderRadius: 5,
+              height: 500,
+              width: 400,
+              padding: 10,
+              marginLeft: 0,
+              marginRight: 0, 
+              paddingTop: 0}}></Image>
             <Button style={{height:'100px', backgroundColor:'black', color:'black'}}>Get This Beer</Button>
-
           </View>
         )
     }
