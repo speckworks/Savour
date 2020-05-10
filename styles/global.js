@@ -14,6 +14,12 @@ export const globalStyles = StyleSheet.create({
     flex: 1,
     padding: 20,
   },
+  icon: {
+    backgroundColor: "f48f2d"
+  },
+  header:{
+    backgroundColor: "f48f2d"
+  }
 });
 
 export const images = {

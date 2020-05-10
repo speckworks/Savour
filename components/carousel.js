@@ -40,14 +40,14 @@ export function MyCarousel(props){
             <Text style={{fontSize: 30, height:400}}>{item.beer}</Text>
             <Text>{item.id}</Text>
             <Image style={{source:item.img}}></Image>
-            <Button style={{height:'50px', backgroundColor:'black', color:'black'}}>Get This Beer</Button>
+            <Button style={{height:'100px', backgroundColor:'black', color:'black'}}>Get This Beer</Button>
 
           </View>
         )
     }
 
     return (
-        <SafeAreaView style={{flex: 1, backgroundColor:'black', paddingTop: 0, }}>
+      <SafeAreaView style={{flex: 1, backgroundColor:'black', paddingTop: 0, }}>
       <View style={{ flex: 1, flexDirection:'row', justifyContent: 'center', }}>
           <Carousel
             layout={"stack"}
