@@ -26,3 +26,48 @@ Your Prisma endpoint is live:
 You can view & edit your data here:
 
   Prisma Admin: https://eu1.prisma.sh/william-robert-simpson-b9a32f/savour-serv/dev/_admin
+
+
+//Create a User
+
+mutation {
+  signup(
+    name: "Test"
+    email: "test@savour.com"
+    password: "test"
+  ) {
+    token
+    user {
+      id
+    }
+  }
+}
+
+
+//Place authorization in headers
+{
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjazl5ZzQ4dWIwaWF2MDkxOG80NHV3M3dvIiwiaWF0IjoxNTg4OTU3MjQ0fQ.1DuEEcuf4I0TE8Ti1gwyz1bJQgjuK9Hy307KsncYme0"
+}
+
+//Post a new Beer based on the following schema
+type Beer {
+  id: ID! 
+  name: String!
+  abv: Int!
+  body: String!
+  votes: [Vote!]!
+	postedBy: User
+  createdAt: DateTime!
+  description: String!
+}
+//////Post 
+mutation {
+  post(
+    name: "Home brew IPA"
+    description: "A light refreshing IPA for lazy summer days"
+    abv: 6
+    body: "Full, light and with a hint of hoppy freshness"
+  ) {
+    id
+  }
+}

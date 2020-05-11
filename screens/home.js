@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, TouchableOpacity, FlatList, Modal } from 'react
 import { globalStyles } from '../styles/global';
 import { MaterialIcons } from '@expo/vector-icons';
 import { MyCarousel } from '../components/carousel';
+import Login from '../components/Login';
 
 import Card from '../shared/card';
 
@@ -16,7 +17,7 @@ export default function Home({ navigation }) {
 
   return (
     <View style={globalStyles.container}>
-      <MyCarousel></MyCarousel>
+      <MyCarousel/>
     </View>
   );
 }

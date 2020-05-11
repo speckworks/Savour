@@ -15,6 +15,20 @@ export const globalStyles = StyleSheet.create({
     padding: 20,
   },
 });
+export const formStyles = StyleSheet.create({
+  input: {
+    borderRadius : 6,
+    height: 40, 
+    borderColor: 'gray', 
+    borderWidth: 1
+  },
+  links: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#333',
+  }
+
+})
 
 export const images = {
   ratings: {
