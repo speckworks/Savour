@@ -88,7 +88,5 @@ class Login extends React.Component {
       </ScrollView>
     );
   }
-
-
 }
 export default Login;
