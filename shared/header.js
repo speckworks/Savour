@@ -1,10 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
-import { MaterialIcons } from '@expo/vector-icons';
-import { MyCarousel } from '../components/carousel';
-
-
+import { MaterialIcons, AntDesign } from '@expo/vector-icons';
+import { SvgUri } from 'react-native-svg';
+ 
 export default function Header({ title, navigation }) {
 
   const openMenu = () => {
@@ -12,30 +11,37 @@ export default function Header({ title, navigation }) {
   }
 
   return (
-    <ImageBackground source={require('../assets/tavourLogo.png')} style={styles.header}>
-      <br></br>
-      <MaterialIcons name='menu' size={28} onPress={openMenu} style={styles.icon} />
-      <View style={styles.headerTitle}>
-        <Image source={require('../assets/tavourLogo.png')} style={styles.headerImage} />
-        <Text style={styles.headerText}>Savour Beer</Text>
+    <>
+    <View>
+    <AntDesign name="setting" size={24} color="black" onPress={openMenu} style={global.icon} />
+    </View>
+    <br></br>
+    <View>
+    <ImageBackground style={global.header}>
+      <View style={global.headerTitle}>
+        <Text style={global.headerText}>Savour Beer</Text>
       </View>
     </ImageBackground>
+    </View>
+    </>
   );
 }
 
-const styles = StyleSheet.create({
+const global = StyleSheet.create({
   header: {
     width: '100%',
     height: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   headerText: {
+    fontFamily:'fantasy',
     fontWeight: 'bold',
     fontSize: 20,
     color: '#333',
     letterSpacing: 1,
+    justifyContent:'bottom'
   },
   icon: {
     position: 'absolute',

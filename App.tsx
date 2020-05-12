@@ -10,12 +10,6 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { setContext } from 'apollo-link-context'
 import { AUTH_TOKEN } from './constants'
 
-const getFonts = () => Font.loadAsync({
-  'nunito-regular': require('./assets/fonts/Nunito-Regular.ttf'),
-  'nunito-bold': require('./assets/fonts/Nunito-Bold.ttf'),
-});
-
-
 const httpLink = createHttpLink({
   uri: 'http://localhost:4000'
 })
@@ -34,25 +28,10 @@ const client = new ApolloClient({
 })
 
 export default function App() {
-  const [fontsLoaded, setFontsLoaded] = useState(false);
-
-  if (fontsLoaded) {
+ 
     return (
       <ApolloProvider client={client}>
-        <Navigator />
+         <AppLoading/>
       </ApolloProvider>
-      
-    );
-  } else {
-    return (
-      <ApolloProvider client={client}>
-         <AppLoading 
-        startAsync={getFonts} 
-        onFinish={() => setFontsLoaded(true)} 
-      />
-      </ApolloProvider>
-     
     )
   }
-
-}
