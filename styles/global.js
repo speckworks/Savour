@@ -12,8 +12,15 @@ export const globalStyles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    padding: 20,
+    padding: "5px",
+    margin:"5px"
   },
+  icon: {
+    backgroundColor: "f48f2d"
+  },
+  header:{
+    backgroundColor: "f48f2d"
+  }
 });
 
 export const images = {
