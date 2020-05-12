@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component testing for <login> <Login> renders 1`] = `
+<RCTScrollView>
+  <View>
+    <View>
+      <Text>
+         Login component 
+      </Text>
+      <Text>
+        Email:
+        <TextInput
+          allowFontScaling={true}
+          id="email"
+          name="email"
+          onChange={[Function]}
+          rejectResponderTermination={true}
+          style={
+            Object {
+              "flex": 1,
+              "padding": 20,
+            }
+          }
+          underlineColorAndroid="transparent"
+          value=""
+        />
+      </Text>
+      <Text>
+        Password:
+        <TextInput
+          allowFontScaling={true}
+          id="password"
+          name="password"
+          onChange={[Function]}
+          rejectResponderTermination={true}
+          secureTextEntry={true}
+          style={
+            Object {
+              "flex": 1,
+              "padding": 20,
+            }
+          }
+          underlineColorAndroid="transparent"
+          value=""
+        />
+      </Text>
+    </View>
+  </View>
+</RCTScrollView>
+`;
