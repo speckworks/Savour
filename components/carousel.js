@@ -11,13 +11,16 @@ import Carousel from 'react-native-snap-carousel';
 import amber from '../assets/amberlager.jpg';
 import lager from "../assets/cerveza-lager.png";
 import andina from '../assets/andina.jpg'
+import ohi from '../assets/otherhalfipa.jpg'
+import hazy from '../assets/hazyipa.jpg'
+import vliet from '../assets/vliet.jpg'
 
 
 export function button(){
 <>
 <Button type="outline"
                     title="Get This Beer"
-                    style={{height:'100px', backgroundColor:'0c3b49'}}
+                    style={{height:'100px', backgroundColor:'0c3b49', color:"black", fontSize:"20px"}}
                     ></Button>  
 </>
 }
@@ -34,7 +37,17 @@ export function MyCarousel(props){
       },
       { beer: "Andina",
         img: andina
+      },
+      {beer: "Other Half Ipa",
+      img: ohi
+      },
+      {beer: "Hazy IPA",
+      img: hazy
+      },
+      {beer: "Vliet",
+      img: vliet
       }
+
     ]);
         console.log("usestate", carouselItems);
     
@@ -47,12 +60,8 @@ export function MyCarousel(props){
               flexDirection:"column",
               backgroundColor:'black',
               borderRadius: 5,
-              height: 600,
-              width: 370,
-              padding: 0,
-              marginLeft: 0,
-              marginRight: 0, 
-              paddingTop: 0}}>
+              height: "100%",
+              width: "100%"}}>
             <Text style={{fontSize: 30, color:'white'}}>
               {item.beer}
               {"\n"}
@@ -67,7 +76,7 @@ export function MyCarousel(props){
               flex:4,
               backgroundColor:'black',
               borderRadius: 5,
-              height: "100",
+              height: "40%",
               width: "100%",
               padding: 10,
               marginLeft: 0,
@@ -75,10 +84,15 @@ export function MyCarousel(props){
               paddingTop: 0}}>
               </Image>
             <br></br>
-             <button style={{display:'flex',
-             flex:1,
-             height:"40px"}}
-             title="Get This Beer"></button>
+             <button style={{
+            display:'flex',
+            backgroundColor:"#f48f2d",
+             fontSize:"20px",
+             textAlign:"justify",
+             justifyContent:"space-around",
+             flex:.25,
+             height:"10%"}}
+             title="Get This Beer">Get This Beer</button>
           </View>
         )
     }

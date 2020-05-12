@@ -12,7 +12,8 @@ export const globalStyles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    padding: 0,
+    padding: "5px",
+    margin:"5px"
   },
   icon: {
     backgroundColor: "f48f2d"
