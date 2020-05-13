@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import * as Font from 'expo-font';
-import { AppLoading } from 'expo';
 import Navigator from './routes/drawer';
-//Apollo config
 import { ApolloProvider } from 'react-apollo';
 import { ApolloClient } from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
@@ -31,7 +29,7 @@ export default function App() {
  
     return (
       <ApolloProvider client={client}>
-         <AppLoading/>
+         <Navigator/>
       </ApolloProvider>
     )
   }

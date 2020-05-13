@@ -16,7 +16,7 @@ import hazy from '../assets/hazyipa.jpg'
 import vliet from '../assets/vliet.jpg'
 
 
-export function button(){
+export default function button(){
 <>
 <Button type="outline"
                     title="Get This Beer"
@@ -57,12 +57,13 @@ export function MyCarousel(props){
         return (
           <View style={{
               display:'flex',
+              flex:1,
               flexDirection:"column",
               backgroundColor:'black',
               borderRadius: 5,
               height: "100%",
               width: "100%"}}>
-            <Text style={{fontSize: 30, color:'white'}}>
+            <Text style={{fontSize: 30, color:'white', flex:.33}}>
               {item.beer}
               {"\n"}
             </Text>
@@ -78,7 +79,7 @@ export function MyCarousel(props){
               borderRadius: 5,
               height: "40%",
               width: "100%",
-              padding: 10,
+              // padding: 10,
               marginLeft: 0,
               marginRight: 0, 
               paddingTop: 0}}>
@@ -92,7 +93,10 @@ export function MyCarousel(props){
              justifyContent:"space-around",
              flex:.25,
              height:"10%"}}
-             title="Get This Beer">Get This Beer</button>
+             key={item.id}
+             onTouchEnd={console.log("Hello!!")}
+            >Get This Beer</button>
+
           </View>
         )
     }
