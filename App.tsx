@@ -1,28 +1,22 @@
-import React, { useState } from 'react';
-import * as Font from 'expo-font';
-import { AppLoading } from 'expo';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import Navigator from './routes/drawer';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import Favorites from './screens/Favorites';
+import Cart from './screens/Cart';
 
-const getFonts = () => Font.loadAsync({
-  'nunito-regular': require('./assets/fonts/Nunito-Regular.ttf'),
-  'nunito-bold': require('./assets/fonts/Nunito-Bold.ttf'),
-});
+const Tab = createBottomTabNavigator();
 
 export default function App() {
-  const [fontsLoaded, setFontsLoaded] = useState(false);
-
-  if (fontsLoaded) {
-    return (
+  return (
+    <NavigationContainer>
       <Navigator />
-    );
-  } else {
-    return (
-      <AppLoading 
-        startAsync={getFonts} 
-        onFinish={() => setFontsLoaded(true)} 
-      />
-    )
-  }
-
+      <Tab.Navigator>
+        {/* <Tab.Screen name='Home' component={Home} /> */}
+        <Tab.Screen name='Favs' component={Favorites} />
+        <Tab.Screen name='Cart' component={Cart} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
 }
