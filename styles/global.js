@@ -12,9 +12,30 @@ export const globalStyles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    padding: 20,
+    padding: "5px",
+    margin:"5px"
   },
+  icon: {
+    backgroundColor: "f48f2d"
+  },
+  header:{
+    backgroundColor: "f48f2d"
+  }
 });
+export const formStyles = StyleSheet.create({
+  input: {
+    borderRadius : 6,
+    height: 40, 
+    borderColor: 'gray', 
+    borderWidth: 1
+  },
+  links: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#333',
+  }
+
+})
 
 export const images = {
   ratings: {

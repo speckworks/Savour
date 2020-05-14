@@ -1,6 +1,6 @@
 <h1>Savour</h1>
 <h4>Mock of a popular craft beer ordering application.</h4> 
-<h4>This is a super basic React Native App.<h4>
+<h4>This is a React Native App.<h4>
 <h5>
 <br>
 <ul>
