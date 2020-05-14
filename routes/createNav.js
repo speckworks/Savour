@@ -11,7 +11,16 @@ const Tab = createBottomTabNavigator();
 const createNav = () => {
    return (
    <NavigationContainer>
-    <Tab.Navigator>
+    <Tab.Navigator 
+    tabBarOptions={{
+        activeTintColor: '#e91e63',
+        style:{"color":"black",
+                display:"flex", 
+                padding:"5px",
+                margin:"5px",
+                verticalAlign:"top"
+        }
+      }}>
       <Tab.Screen name='Home' component={Home} />
       <Tab.Screen name='Favs' component={Favorites} />
       <Tab.Screen name='Cart' component={Cart} />
