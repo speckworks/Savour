@@ -7,6 +7,9 @@
 <li>
 "yarn add react-native"  if you haven't already installed it on your system. 
 </li>
+<li>
+yarn add @react-navigation/bottom-tabs for bottom navigation
+</li>
 <br>
 <li>
 "yarn install" for good measure. 
@@ -22,4 +25,4 @@ I recommend starting with the web view, but if you are able to add the Expo App 
   </span>
 <br>
  </h5>
-<h1>Cheers!</h1>  
+<h1>Cheers!</h1>

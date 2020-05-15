@@ -94,7 +94,7 @@ export function MyCarousel(props){
              flex:.25,
              height:"10%"}}
              key={item.id}
-             onTouchEnd={console.log("Hello!!")}
+            //  onTouchEnd={console.log("Hello!!")}
             >Get This Beer</button>
 
           </View>
