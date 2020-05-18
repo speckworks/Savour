@@ -10,7 +10,7 @@
  </li>
 <br>
 <li>
-"Expo Start" from Command Line runs the App.  If you have Expo App downloaded on your phone, you can grab a QR code in the console and start up the app on your phone.  Otherwise, run the app in the web browser.  
+"expo start" from Command Line runs the App.  If you have Expo App downloaded on your phone, you can grab a QR code in the console and start up the app on your phone.  Otherwise, run the app in the web browser.  
  </li>
 </ul>
 <br>
