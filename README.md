@@ -4,15 +4,9 @@
 <h5>
 <br>
 <ul>
+
 <li>
-"yarn add react-native"  if you haven't already installed it on your system. 
-</li>
-<li>
-yarn add @react-navigation/bottom-tabs for bottom navigation
-</li>
-<br>
-<li>
-"yarn install" for good measure. 
+"yarn install" 
  </li>
 <br>
 <li>
