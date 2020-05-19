@@ -6,7 +6,7 @@ import {
   Image,
   SafeAreaView, 
   Dimensions} from 'react-native';
-import Button from 'react-native-elements';
+import {Button} from 'react-native-elements';
 import Carousel from 'react-native-snap-carousel';
 import amber from '../assets/amberlager.jpg';
 import lager from "../assets/cerveza-lager.png";

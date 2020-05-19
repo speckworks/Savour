@@ -71,3 +71,13 @@ mutation {
     id
   }
 }
+
+////Fetch
+query {
+   product(filter:"IPA",orderBy: createdAt_ASC) {
+  	beers{
+      name
+      description
+    }
+  }
+}
