@@ -16,10 +16,10 @@ export const globalStyles = StyleSheet.create({
     margin:"5px"
   },
   icon: {
-    backgroundColor: "f48f2d"
+    backgroundColor: "#f48f2d"
   },
   header:{
-    backgroundColor: "f48f2d"
+    backgroundColor: "#f48f2d"
   }
 });
 export const formStyles = StyleSheet.create({

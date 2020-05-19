@@ -1,48 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`component testing for <login> <Login> renders 1`] = `
+exports[`renders correctly 1`] = `
 <RCTScrollView>
   <View>
+    <Text>
+      Sign Up
+    </Text>
     <View>
-      <Text>
-         Login component 
-      </Text>
-      <Text>
-        Email:
-        <TextInput
-          allowFontScaling={true}
-          id="email"
-          name="email"
-          onChange={[Function]}
-          rejectResponderTermination={true}
-          style={
-            Object {
-              "flex": 1,
-              "padding": 20,
-            }
+      <TextInput
+        allowFontScaling={true}
+        name="name"
+        onChange={[Function]}
+        placeholder="Your name"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "borderColor": "gray",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 40,
           }
-          underlineColorAndroid="transparent"
-          value=""
-        />
-      </Text>
-      <Text>
-        Password:
-        <TextInput
-          allowFontScaling={true}
-          id="password"
-          name="password"
-          onChange={[Function]}
-          rejectResponderTermination={true}
-          secureTextEntry={true}
-          style={
-            Object {
-              "flex": 1,
-              "padding": 20,
-            }
+        }
+        type="text"
+        underlineColorAndroid="transparent"
+      />
+      <TextInput
+        allowFontScaling={true}
+        name="email"
+        onChange={[Function]}
+        placeholder="Your email address"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "borderColor": "gray",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 40,
           }
-          underlineColorAndroid="transparent"
-          value=""
-        />
+        }
+        type="text"
+        underlineColorAndroid="transparent"
+      />
+      <TextInput
+        allowFontScaling={true}
+        name="password"
+        onChange={[Function]}
+        placeholder="Choose a safe password"
+        rejectResponderTermination={true}
+        style={
+          Object {
+            "borderColor": "gray",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "height": 40,
+          }
+        }
+        type="password"
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View>
+      <Text
+        onClick={[Function]}
+      >
+        create account
+      </Text>
+      <Text
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#333",
+            "fontSize": 18,
+            "fontWeight": "bold",
+          }
+        }
+      >
+        already have an account?
       </Text>
     </View>
   </View>
