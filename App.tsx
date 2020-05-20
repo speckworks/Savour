@@ -36,8 +36,9 @@ const client = new ApolloClient({
 class App extends React.Component {
   state = {
     login: false,
-    email: "test@home.com",
-    password: "test",
+    signup: false,
+    email: "",
+    password: "",
     name: "",
     success: false,
   };
@@ -45,6 +46,9 @@ class App extends React.Component {
       this.setState({
         [args.target.name]: args.target.value
       })
+  }
+  switchSignBool=(signup)=>{
+    this.setState({ signup: !signup })
   }
   switchLoginBool=(login)=>{
     this.setState({ login: !login })
@@ -55,7 +59,7 @@ class App extends React.Component {
     })
   }
   render() {
-    const { success, login, email, name, password } = this.state;
+    const { success, signup,login, email, name, password } = this.state;
     return (
       <ApolloProvider client={client}>
         {success ? 
@@ -65,6 +69,8 @@ class App extends React.Component {
         password={password}
         changeInputText={this.changeTextInput}
         login={login}
+        signup={signup}
+        switchSignBool={this.switchSignBool}
         switchLoginBool={this.switchLoginBool}
         succesful={this.loginSuccess}/>
         }
