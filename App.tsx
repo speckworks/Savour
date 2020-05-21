@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import Navigator from "./routes/drawer";
@@ -86,5 +87,17 @@ class App extends React.Component {
       </ApolloProvider>
     );
   }
+=======
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import Navigator from './routes/drawer';
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Navigator />
+    </NavigationContainer>
+  );
+>>>>>>> App update
 }
 export default App;
