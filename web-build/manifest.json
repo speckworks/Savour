@@ -1,0 +1,7 @@
+{
+  "display": "standalone",
+  "lang": "en",
+  "name": "Savour",
+  "short_name": "Savour",
+  "start_url": "/?utm_source=web_app_manifest"
+}

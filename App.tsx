@@ -55,6 +55,11 @@ class App extends React.Component {
       success: true
     })
   }
+  changeTextInput=(args)=>{     
+    this.setState({
+      [args.target.name]: args.target.value
+    })
+}
   render() {
     const { success, login, email, name, password } = this.state;
     return (
@@ -64,7 +69,7 @@ class App extends React.Component {
         email={email}
         name={name}
         password={password}
-        changeInputText={changeTextInput}
+        changeInputText={this.changeTextInput}
         login={login}
         switchLoginBool={this.switchLoginBool}
         succesful={this.loginSuccess}/>
