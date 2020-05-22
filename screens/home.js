@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { View } from 'react-native';
 =======
+=======
+>>>>>>> 552c6fcdc953ad42e7314bb6c4e6ba5555f7f4c4
 import {
   StyleSheet,
   View,
@@ -10,12 +13,18 @@ import {
   FlatList,
   Modal,
 } from 'react-native';
+<<<<<<< HEAD
 >>>>>>> App update
+=======
+>>>>>>> 552c6fcdc953ad42e7314bb6c4e6ba5555f7f4c4
 import { globalStyles } from '../styles/global';
 import { MyCarousel } from '../components/carousel';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Login from '../components/Login';
 =======
+=======
+>>>>>>> 552c6fcdc953ad42e7314bb6c4e6ba5555f7f4c4
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Card from '../shared/card';
@@ -24,7 +33,11 @@ import Card from '../shared/card';
 import Favorites from '../screens/favorites';
 import Cart from '../screens/cart';
 
+import Favorites from '../screens/favorites';
+import Cart from '../screens/cart';
+
 export default function Home({ navigation }) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   return (
@@ -34,6 +47,8 @@ export default function Home({ navigation }) {
   );
 }
 =======
+=======
+>>>>>>> 552c6fcdc953ad42e7314bb6c4e6ba5555f7f4c4
   const Tab = createBottomTabNavigator();
   const [modalOpen, setModalOpen] = useState(false);
   const [reviews, setReviews] = useState([
@@ -84,4 +99,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
+<<<<<<< HEAD
 >>>>>>> App update
+=======
+>>>>>>> 552c6fcdc953ad42e7314bb6c4e6ba5555f7f4c4
