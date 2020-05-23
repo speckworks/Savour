@@ -13,7 +13,6 @@ import changeTextInput  from './components/changeTextInput'
 // import Home from './screens/home'
 // import Favorites from './screens/Favorites';
 // import Cart from './screens/Cart';
-
 // const Tab = createBottomTabNavigator();
 
 const httpLink = createHttpLink({
