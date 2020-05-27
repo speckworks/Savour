@@ -60,11 +60,13 @@ class Login extends React.Component {
       name,
       password,
       changeInputText,
+      buttonStyle,
     } = this.props;
     return (
       <View style={formStyles.container}>
         {login ? 
         <LogInForm
+        buttonStyle={buttonStyle}
         email={email}
         password={password}
         changeInputText={changeInputText}

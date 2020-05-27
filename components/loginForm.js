@@ -16,7 +16,7 @@ const LOGIN_MUTATION = gql`
 `;
 
 export const LogInForm = (props) => {
-    const {email, password, confirm} = props
+    const {email, password, confirm, buttonStyle} = props
   return (
       
     <View style={formStyles.container}>
@@ -58,7 +58,8 @@ export const LogInForm = (props) => {
       >
         {(mutation) => (
           <View style={formStyles.formBound}>
-            <Text onClick={mutation} style={formStyles.login}>
+            
+            <Text onClick={mutation} style={[buttonStyle,formStyles.login]}>
               Login
             </Text>
           </View>
@@ -67,5 +68,4 @@ export const LogInForm = (props) => {
     </View>
   );
 };
-//TODO - create props to highlight when an input is -
-//active and change color of login button once values are filled in
+

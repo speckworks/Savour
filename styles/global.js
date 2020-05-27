@@ -8,7 +8,7 @@ export const globalStyles = StyleSheet.create({
   titleText: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#333",
+    color: "#1c1c1c",
   },
   paragraph: {
     marginVertical: 8,
@@ -62,7 +62,7 @@ export const formStyles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   login:{
-    backgroundColor: '#FDD7E4',
+    // backgroundColor: '#FDD7E4',
     alignSelf: 'stretch',
     textAlign: 'center',
     paddingTop:15,
@@ -88,7 +88,7 @@ export const formStyles = StyleSheet.create({
     width: windowWidth / 2,
     height: 60,
     backgroundColor: "#c7681a",
-    color: '#fff',
+    color: '#1c1c1c',
     textAlign: "center",
     paddingTop:15,
     fontSize: 16,
