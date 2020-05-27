@@ -1,6 +1,6 @@
 <h1>Savour</h1>
 <h4>Mock of a popular craft beer ordering application. This is for DEMO-PURPOSE ONLY.</h4> 
-<h4>We have no intention of commercializing this app at this point, we simply want to show our enthusiasm for another React Native Product with a similar name (and maybe become contenders for a position on their team).<h4>
+<h4>*We have no intention of commercializing this app at this point, we simply want to show our enthusiasm for another React Native Product with a similar name (and maybe become contenders for a position on their team).*<h4>
 <h5>
 <br>
 <ul>
