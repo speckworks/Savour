@@ -55,11 +55,13 @@ type Beer {
   name: String!
   abv: Int!
   body: String!
+  img: String!
   votes: [Vote!]!
 	postedBy: User
   createdAt: DateTime!
   description: String!
 }
+
 //////Post 
 mutation {
   post(

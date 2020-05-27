@@ -3,6 +3,7 @@ type Beer {
   name: String!
   abv: Int!
   body: String!
+  img: String!
   description: String!
   postedBy: User
 	votes: [Vote!]!

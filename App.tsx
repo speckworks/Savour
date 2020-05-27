@@ -1,7 +1,5 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
 import Navigator from "./routes/drawer";
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { ApolloProvider } from "react-apollo";
 import { ApolloClient } from "apollo-client";
 import { createHttpLink } from "apollo-link-http";
@@ -9,11 +7,6 @@ import { InMemoryCache } from "apollo-cache-inmemory";
 import { setContext } from "apollo-link-context";
 import { AUTH_TOKEN } from "./constants";
 import Login from "./components/Login";
-import changeTextInput  from './components/changeTextInput'
-// import Home from './screens/home'
-// import Favorites from './screens/Favorites';
-// import Cart from './screens/Cart';
-// const Tab = createBottomTabNavigator();
 
 const httpLink = createHttpLink({
   uri: "http://localhost:4000",
