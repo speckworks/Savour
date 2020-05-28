@@ -9,6 +9,7 @@ import { InMemoryCache } from "apollo-cache-inmemory";
 import { setContext } from "apollo-link-context";
 import { AUTH_TOKEN } from "./constants";
 import Login from "./components/Login";
+import changeTextInput  from './components/changeTextInput'
 // import Home from './screens/home'
 // import Favorites from './screens/Favorites';
 // import Cart from './screens/Cart';
@@ -43,6 +44,7 @@ class App extends React.Component {
     name: "",
     success: false,
   };
+<<<<<<< HEAD
   //Change the style color and form control
   //passes down to login form for input values
   changeTextInput=(args)=>{     
@@ -63,6 +65,13 @@ class App extends React.Component {
   switchSignBool=(signup)=>{
     this.setState({ signup: !signup })
   }
+=======
+  // changeTextInput=(args)=>{     
+  //     this.setState({
+  //       [args.target.name]: args.target.value
+  //     })
+  // }
+>>>>>>> master
   switchLoginBool=(login)=>{
     this.setState({ login: !login })
   }
@@ -83,7 +92,7 @@ class App extends React.Component {
         email={email}
         name={name}
         password={password}
-        changeInputText={this.changeTextInput}
+        changeInputText={changeTextInput}
         login={login}
         signup={signup}
         switchSignBool={this.switchSignBool}

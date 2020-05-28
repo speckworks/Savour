@@ -20,11 +20,19 @@ export const globalStyles = StyleSheet.create({
     margin: "5px",
   },
   icon: {
+<<<<<<< HEAD
     backgroundColor: "f48f2d",
   },
   header: {
     backgroundColor: "f48f2d",
   },
+=======
+    backgroundColor: "#f48f2d"
+  },
+  header:{
+    backgroundColor: "#f48f2d"
+  }
+>>>>>>> master
 });
 export const formStyles = StyleSheet.create({
   container: {

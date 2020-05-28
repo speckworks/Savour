@@ -1,26 +1,31 @@
 import React from "react";
 import Login from "../components/Login";
-import Adapter from 'enzyme-adapter-react-16';
 import renderer from "react-test-renderer";
-import { configure, shallow } from 'enzyme';
+import gql from "graphql-tag";
+import { useQuery } from "@apollo/react-hooks";
+import { MockedProvider } from '@apollo/react-testing';
 
-configure({ adapter: new Adapter() });
-
-describe("component testing for <login>", () => {
-  test("<Login> renders", () => {
-    const tree = renderer.create(<Login />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-  test('input email fields updates state', ()=> {
-	const instanceOf = renderer.create(<Login/>).getInstance()
-	instanceOf.changeEmailField('someEmail');
-	expect(instanceOf.state.email).toEqual('someEmail');
-  })
-  test('input password fields updates state', ()=> {
-	const instanceOf = renderer.create(<Login/>).getInstance()
-	instanceOf.changePassField('somePass');
-	expect(instanceOf.state.password).toEqual('somePass');
-  })
-
-  
+test('renders correctly', () => {
+  const tree = renderer.create(
+    <MockedProvider mocks={[]} addTypename={false}>
+      <Login/>
+      </MockedProvider>).toJSON();
+  expect(tree).toMatchSnapshot();
 });
+const component = renderer.create(
+  <MockedProvider mocks={[]} addTypename={false}>
+    <Login />
+  </MockedProvider>,
+);
+
+// describe("<Login />", () => {
+//   context("when new users opens app", () => {
+//     it("displays the new user signup", ()=> component.expect());
+//   });
+//   context("when prev users opens app", () => {
+//     it("displays the existing user login");
+//   });
+//   context("when new user submits sign up", () => {
+//     it("returns JSON token and updates login success");
+//   });
+// });
