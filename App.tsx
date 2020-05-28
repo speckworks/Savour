@@ -36,32 +36,46 @@ const client = new ApolloClient({
 
 class App extends React.Component {
   state = {
+    buttonStyle: {backgroundColor: '#faf6f2', color: '#b5b5b5'},
     login: false,
-    email: "test@home.com",
-    password: "test",
+    signup: false,
+    email: "",
+    password: "",
     name: "",
     success: false,
   };
-  // changeTextInput=(args)=>{     
-  //     this.setState({
-  //       [args.target.name]: args.target.value
-  //     })
-  // }
+  //Change the style color and form control
+  //passes down to login form for input values
+  changeTextInput=(args)=>{     
+      this.setState({
+        [args.target.name]: args.target.value
+      })
+      if(this.state.email.length > 1 && this.state.password.length > 1){
+        this.setState({
+          buttonStyle: {backgroundColor: '#c7681a',color: '#1c1c1c'}
+        })
+      }else if(this.state.email.length < 1){
+        this.setState({
+          buttonStyle: {backgroundColor: '#faf6f2',color: '#b5b5b5'}
+        })
+      }
+  }
+  //enables switching of the views between login form and signup
+  switchSignBool=(signup)=>{
+    this.setState({ signup: !signup })
+  }
   switchLoginBool=(login)=>{
     this.setState({ login: !login })
   }
+
+  //when login is succesful, we get success, this controls view for user
   loginSuccess=()=>{
     this.setState({
       success: true
     })
   }
-  changeTextInput=(args)=>{     
-    this.setState({
-      [args.target.name]: args.target.value
-    })
-}
   render() {
-    const { success, login, email, name, password } = this.state;
+    const { success, signup,login, email, name, password, buttonStyle } = this.state;
     return (
       <ApolloProvider client={client}>
         {success ? 
@@ -71,18 +85,13 @@ class App extends React.Component {
         password={password}
         changeInputText={this.changeTextInput}
         login={login}
+        signup={signup}
+        switchSignBool={this.switchSignBool}
         switchLoginBool={this.switchLoginBool}
-        succesful={this.loginSuccess}/>
+        succesful={this.loginSuccess}
+        buttonStyle={buttonStyle}
+        />
         }
-       
-        {/* <Navigator/> */}
-        {/* <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name='Home' component={Home} />
-        <Tab.Screen name='Favs' component={Favorites} />
-        <Tab.Screen name='Cart' component={Cart} />
-      </Tab.Navigator>
-    </NavigationContainer> */}
       </ApolloProvider>
     );
   }
